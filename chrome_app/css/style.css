@@ -4,7 +4,6 @@
 } */
 
 body {
-    background-color: beige;
     padding: 0;
     margin: 0;
 }
@@ -22,15 +21,43 @@ body {
     align-items: center;
 }
 
-/* #blur {
+#blur {
     position: absolute;
+    z-index: 0;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     backdrop-filter: blur(1px) brightness(60%);
     pointer-events: none;
-} */
+}
+
+#login-form{
+    z-index: 1;
+    text-align: center;
+
+
+}
+
+#login-form h1{
+    font-size: 50px;   
+    color: #eee;
+}
+
+#login-form .input{
+    background-color: #eee;
+    border: none;
+    padding: 12px 15px;
+    margin:  0;
+    width: 100%;
+}
+#login-form .button{
+    background-color: #eee;
+    border: none;
+    padding: 12px 15px;
+    margin-top: 20px;
+    width: 20%;
+}
 
 #weather {
     position: absolute;
@@ -41,8 +68,13 @@ body {
     font-size: 20px;
 }
 
+#todo-wrapper{
+    z-index: 2;
+    text-align: center;
+}
 
 #clock {
+    color: #eee;
     margin: 20px;
     /* font-family: "clock-font"; */
     font-size: 120px;
@@ -54,6 +86,7 @@ body {
 }
 
 #greeting {
+    color: #eee;
     margin-top: -20px;
     margin-bottom: 50px;
     font-size: 60px;
@@ -67,27 +100,41 @@ body {
     width: 100%;
 
 }
-input {
+#todo-form input {
     background-color: #eee;
     border: none;
     padding: 12px 15px;
-    /* margin:  0; */
+    margin: 0;
     width: 50%;
 }
 
 #todo-list{
+    color: #eee;
+    margin-right: 50;
+
     text-align: center;
 }
+/* #todo-list span{
+    text-align: center;
+    margin-right: 50;
+} */
 
 #quote {
+    color: #eee;
     position: absolute;
     bottom: 40px;
     margin-bottom: 50px;
     margin-left: 50px;
     margin-right: 50px;
     font-size: 24px;
+    align-items: center;
+
     /* width: 80%; */
+    /* text-align: center; */
+}
+#quote span{
     text-align: center;
+
 }
 
 .hidden {

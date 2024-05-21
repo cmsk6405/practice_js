@@ -1,6 +1,7 @@
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
 const greeting = document.querySelector("#greeting");
+const toDoWrapper = document.querySelector("#todo-wrapper")
 
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
@@ -13,14 +14,14 @@ function onLoginSubmit(event){
 
     localStorage.setItem(USERNAME_KEY, username);
 
-    paintGreetings(username)
-
-    console.log(username);
+    paintGreetings(username);
 }
 
 function paintGreetings(username){
     greeting.innerText = `Hello ${username}`;
     greeting.classList.remove(HIDDEN_CLASSNAME);
+    
+    toDoWrapper.classList.remove(HIDDEN_CLASSNAME);
 }
 
 
