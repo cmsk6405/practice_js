@@ -1,7 +1,8 @@
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
 const greeting = document.querySelector("#greeting");
-const toDoWrapper = document.querySelector("#todo-wrapper")
+const toDoWrapper = document.querySelector("#todo-wrapper");
+// const quoteShow = document.querySelector("#quote");
 
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
@@ -22,6 +23,8 @@ function paintGreetings(username){
     greeting.classList.remove(HIDDEN_CLASSNAME);
     
     toDoWrapper.classList.remove(HIDDEN_CLASSNAME);
+    toDoWrapper.classList.add("todoShow");
+    // quoteShow.classList.remove(HIDDEN_CLASSNAME);
 }
 
 

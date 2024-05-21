@@ -5,6 +5,7 @@
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css" >
+    <link rel="stylesheet" href="css/reset.css">
     <title>Momentum</title>
 </head>
 <body>
@@ -13,33 +14,33 @@
 
         <form id="login-form" class="hidden">
             <h1>Hello! What your name?</h1>
-            <input class="input" required maxlength="15" type="text" placeholder="what is your name?" />
-            <input class="button" type="submit" value="Continue" />
-            <!-- <button type="submit" >Log In</button> -->
+            <input class="getText" required maxlength="15" type="text" placeholder="" />
+            <h2>Please enter your name or the name you prefer to be called</h2>
+            <!-- <input class="button" type="submit" value="Continue" /> -->
+            <button class="custom-btn btn-16">Continue</button>
+            
         </form>
 
         <div id="todo-wrapper" class="hidden">
             <h2 id="clock">00:00:00</h2>
-
             <h1 id="greeting" class="hidden"></h1>
-
+            
             <form id="todo-form">
-                <input type="text" placeholder="Write a To Do and Press Enter" required/>
+                <input class="getText" type="text" placeholder="What is your main goal for today?" required/>
             </form>
     
             <ul id="todo-list"></ul>
-    
-            <div id="quote">
-                <span></span>
-                <span></span>
-            </div>
             
+            <div id="quote">
+                <span></span><br><br>
+                <span class="auth"></span>
+            </div>
+
             <div id="weather">
                 <span></span>
                 <span></span>
             </div>
-        </div>
-        
+        </div>        
     </div>
     
 
