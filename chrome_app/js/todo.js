@@ -6,6 +6,8 @@ const toDoList = document.getElementById("todo-list");
 const TODOS_KEY = "todos";
 
 let toDos = [];
+let checkedToDo =[];
+
 
 function saveToDos(){
     localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
@@ -18,19 +20,52 @@ function deleteToDo(event){
     saveToDos()
 }
 
+// function deleteLine(event) {
+//     const checkbox = event.target;
+//     const li = checkbox.parentElement;
+//     const span = li.querySelector("span");
+
+//     if (checkbox.checked) {
+//         span.style.textDecoration = "line-through";
+//     } else {
+//         span.style.textDecoration = "none";
+//     }
+// }
+
+
+
 function paintToDo(newTodo){
     const li = document.createElement("li");
     li.id = newTodo.id;
     const span = document.createElement("span");
-    const button = document.createElement("button");
-
     span.innerText = newTodo.text;
-    button.innerText = "❌";
+    const button = document.createElement("button");
+    
+    button.classList.add("deleteBtn")
     button.addEventListener("click", deleteToDo);
     li.appendChild(span);
     li.appendChild(button);
     toDoList.appendChild(li);
 }
+
+// function paintToDo(newTodo){
+//     const li = document.createElement("li");
+//     li.id = newTodo.id;
+
+//     const span = document.createElement("span");
+//     span.innerText = newTodo.text;
+
+//     const checkbox = document.createElement("input");
+//     checkbox.type = "checkbox"
+
+//     // button.innerText = "❌";
+//     // button.addEventListener("click", deleteToDo);
+    
+//     checkbox.addEventListener("click", deleteLine);
+//     li.appendChild(span);
+//     li.appendChild(checkbox);
+//     toDoList.appendChild(li);
+// }
 
 function handleToDoSubmit(event){
     event.preventDefault();

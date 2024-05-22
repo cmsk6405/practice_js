@@ -1,4 +1,6 @@
-const API_KEY = api-key
+const API_KEY = key
+
+const weatherIcon = document.querySelector(".weatherIcon")
 
 function onGeoOK(position){
     const lat = position.coords.latitude;
@@ -7,10 +9,14 @@ function onGeoOK(position){
     fetch(url)
     .then((response) => response.json())
     .then((data) => {
+        const iconCode = data.weather[0].icon;
+        const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`
+
         const weather = document.querySelector("#weather span:first-child")
         const city = document.querySelector("#weather span:last-child")
         city.innerText = data.name;
         weather.innerText = `${data.weather[0].main} / ${data.main.temp}`;
+        weatherIcon.setAttribute("src", iconUrl)
     });
     
 }
